@@ -15,4 +15,4 @@ def linear_lr_decay(initial_lr: float, end_lr: float, num_steps: int) -> list:
     if num_steps == 0:
         return []
     else:
-        return list(np.linspace(initial_lr, end_lr, num_steps).tolist())
+        return np.linspace(initial_lr, end_lr, num_steps).tolist()
