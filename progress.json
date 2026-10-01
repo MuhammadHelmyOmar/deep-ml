@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T11:07:35.427Z",
+  "generated_at": "2026-10-01T11:30:41.734Z",
   "items": {
     "problem:127": {
       "kind": "problem",
@@ -11,6 +11,19 @@
       "path": "problems/0127-find-captain-redbeard-s-hidden-treasure",
       "first_solved_at": "2026-09-28T11:07:31.931Z",
       "last_pushed_at": "2026-09-28T11:07:31.931Z",
+      "language": "python",
+      "lines": 19
+    },
+    "problem:377": {
+      "kind": "problem",
+      "id": "377",
+      "title": "Linear Learning Rate Decay",
+      "difficulty": "easy",
+      "category": "Machine Learning",
+      "url": "https://www.deep-ml.com/problems/377",
+      "path": "problems/0377-linear-learning-rate-decay",
+      "first_solved_at": "2026-10-01T11:30:39.259Z",
+      "last_pushed_at": "2026-10-01T11:30:39.259Z",
       "language": "python",
       "lines": 19
     }
