@@ -10,10 +10,9 @@ def linear_lr_decay(initial_lr: float, end_lr: float, num_steps: int) -> list:
     Returns:
         List of learning rates for each step
     """
-    if num_steps > 1:
-        step_size = (initial_lr-end_lr)/(num_steps-1)
-        return [(initial_lr - t*step_size) for t in range(num_steps)]
-    elif num_steps == 1:
-        return [initial_lr]
-    else:
+    import numpy as np
+
+    if num_steps == 0:
         return []
+    else:
+        return list(np.linspace(initial_lr, end_lr, num_steps).tolist())
