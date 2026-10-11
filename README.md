@@ -2,7 +2,7 @@
 
 My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solution here was written by hand.
 
-**2** solved · 2 problems · 0 labs · 0 math
+**3** solved · 3 problems · 0 labs · 0 math
 
 ![Coverage](./coverage.svg)
 
@@ -12,6 +12,7 @@ My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solu
 
 | | Difficulty | Solved | |
 | --- | --- | --- | --- |
+| [Gradient Direction and Magnitude](https://www.deep-ml.com/problems/308) | easy | 2026-10-11 | [solution](problems/0308-gradient-direction-and-magnitude) |
 | [Linear Learning Rate Decay](https://www.deep-ml.com/problems/377) | easy | 2026-10-01 | [solution](problems/0377-linear-learning-rate-decay) |
 | [Find Captain Redbeard's Hidden Treasure](https://www.deep-ml.com/problems/127) | medium | 2026-09-28 | [solution](problems/0127-find-captain-redbeard-s-hidden-treasure) |
 
