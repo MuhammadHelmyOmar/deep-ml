@@ -15,7 +15,7 @@ def gradient_direction_magnitude(gradient: list) -> dict:
 	"""
 	gradient = np.array(gradient)
 
-	mag = np.sqrt(np.sum(gradient**2))
+	mag = np.linalg.norm(gradient)
 	direc= (gradient/mag) if mag else np.zeros_like(gradient)
 	desc_direc = -direc
 
