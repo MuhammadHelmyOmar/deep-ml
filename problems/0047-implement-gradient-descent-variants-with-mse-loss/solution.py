@@ -24,14 +24,14 @@ def gradient_descent(X, y, weights, learning_rate, n_epochs, batch_size=1, metho
     elif method == 'stochastic':
         batch_size = 1
 
-    for epoch in range(n_epochs):
+    for _ in range(n_epochs):
         
         for batch_start in range(0, sample_size, batch_size):
             X_batch = X[batch_start : batch_start+batch_size]
             y_batch = y[batch_start : batch_start+batch_size]
 
             pred = X_batch @ w
-            mse = (pred - y_batch) @ X_batch
-            w -= learning_rate * (2/len(X_batch)) * mse
+            grad = (2/len(X_batch)) * (pred - y_batch) @ X_batch
+            w -= learning_rate * grad
     
     return w
