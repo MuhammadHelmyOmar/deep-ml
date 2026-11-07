@@ -8,7 +8,7 @@ def train_neuron(
 	learning_rate: float, 
 	epochs: int) -> (np.ndarray, float, list[float]):
 
-	w, b = initial_weights, initial_bias
+	w, b = np.array(initial_weights, dtype=(float)), float(initial_bias)
 	n = len(features)
 	mse_values = []
 
@@ -19,15 +19,14 @@ def train_neuron(
 		y = 1/(1+np.exp(-z))
 
 		# Loss
-		mse = sum(((y-labels)**2))/n
-		mse_values.append(mse)
+		error = y-labels
+		mse_values.append(np.mean(error**2))
 
 		# Backward Pass
-		w_grad = (2 * ((y-labels) * y * (1-y)) @ features)/n
-		b_grad = (2 * sum((y-labels) * y * (1-y)))/n
+		delta = (2/n)* error * y * (1-y)
 	
 		# Parameter Update
-		w -= learning_rate * w_grad
-		b -= learning_rate * b_grad
+		w -= learning_rate * (delta @ features)
+		b -= learning_rate * delta.sum()
 
-	return w, b, mse_values
+	return np.round(w, 4), np.round(b, 4), np.round(mse_values, 4).tolist()
